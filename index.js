@@ -36,12 +36,14 @@
     function startGame() {
         var buttonsChoiceGame = doc.querySelectorAll("[data-js='button']");
         Array.prototype.forEach.call(buttonsChoiceGame, function (button) {
-            button.addEventListener('click', function (event) {
-                divButton.innerHTML = '';
-                numbersBet = [];
-                createGame(event.target.innerHTML);
-            });
+            button.addEventListener('click', typeGame);
         });
+    }
+
+    function typeGame() {
+        divButton.innerHTML = '';
+        numbersBet = [];
+        createGame(this.innerHTML);
     }
 
     function createGame(typeButton) {
@@ -104,7 +106,6 @@
         });
     }
 
-
     function eventButtonsBet(game) {
         var buttons = doc.querySelectorAll("[data-js='numbers']");
         Array.prototype.forEach.call(buttons, function (button) {
@@ -141,13 +142,11 @@
         eventButtonRemove();
     }
 
-
     function ascendingOrderArray(numbersBet) {
         numbersBet.sort(function (a, b) {
             return a - b;
         });
     }
-
 
     function changeInput(values) {
         var value = values.reduce((act, at) => {
@@ -171,7 +170,6 @@
         })
     }
 
-
     function clearButton() {
         var buttons = doc.querySelectorAll('[data-js="numbers"]');
         Array.prototype.forEach.call(buttons, function (button) {
@@ -188,8 +186,7 @@
     }
 
     function removeBet() {
-        var resumo;
-        resumo = doc.querySelector(`[data-id="${this['id']}"]`);
+        var resumo = doc.querySelector(`[data-id="${this['id']}"]`);
         var priceBet = resumo.lastElementChild.lastElementChild.children[1].innerHTML;
         idItemsCart--;
         valueBetTotal(priceBet);
@@ -199,7 +196,7 @@
     function valueBetTotal(stringPrice) {
         var regexNumber = /\d+\.\d+/g;
         valuesBet.splice(valuesBet.indexOf(`${parseFloat(stringPrice.match(regexNumber))}`), 1);
-        var newValue = parseFloat(inputPrice.value.replace(/\,/, '.').match(/\d+\.\d+/)) - parseFloat(stringPrice.match(/\d+\.\d+/g));
+        var newValue = parseFloat(inputPrice.value.replace(/\,/, '.').match(regexNumber)) - parseFloat(stringPrice.match(regexNumber));
         inputPrice.value = newValue.toFixed(2).replace(/\./, ',');
     }
     init();
