@@ -118,7 +118,8 @@
 
     function cartClean() {
         var idCartClean = doc.getElementById('cartClean');
-        if (divCartBet.childElementCount > 0) return idCartClean.setAttribute('class', 'clean');
+        if (divCartBet.childElementCount > 0)
+            return idCartClean.setAttribute('class', 'clean');
     }
 
     function saveNumbers(numbersBet) {
@@ -131,13 +132,13 @@
         divBet.insertAdjacentHTML('beforeend', `<button data-js="removeBet" class="btRemove" id=${idItemsCart}><img src='./assets/lixo.png'></button>`);
         divBet.insertAdjacentHTML('beforeend', `<div class="numbersItem" style="border-left: 5px solid ${currentGame.color}">
         <div class="numbers">${numbersBet.join(',')}</div>
-        <div class="game" data-js="game"><p style="color:${currentGame.color}"">${currentGame.type}</p><p>R$${(currentGame.price).toFixed(2)}</p>
+        <div class="game" data-js="game" id="${currentGame.type}"><p style="color:${currentGame.color}"">${currentGame.type}</p><p>R$${(currentGame.price).toFixed(2)}</p>
         </div></div>`);
         divCartBet.appendChild(divBet);
         valuesBet.push(currentGame.price);
-        eventButtonRemove(currentGame);
         changeInput(valuesBet);
         clearButton();
+        eventButtonRemove();
     }
 
 
@@ -166,8 +167,10 @@
             if (numbersBet.length === 0)
                 return alert("Não há números selecionados");
             (numbersBet.length === currentGame['max-number']) ? saveNumbers(numbersBet, currentGame) : alert(`Selecione ${currentGame['max-number']} números para apostar na ${currentGame.type}`);
+
         })
     }
+
 
     function clearButton() {
         var buttons = doc.querySelectorAll('[data-js="numbers"]');
@@ -179,16 +182,20 @@
 
     function eventButtonRemove() {
         var button = doc.querySelectorAll('[data-js="removeBet"]');
-        Array.prototype.forEach.call(button, function (but) {
-            but.addEventListener('click', function () {
-                var resumo = doc.querySelector(`[data-id="${but['id']}"]`);
-                var priceBet = resumo.lastChild.lastChild.childNodes[1].innerHTML;
-                valueBetTotal(priceBet);
-                idItemsCart--;
-                resumo.parentNode.removeChild(resumo);
-            });
-        });
+        Array.prototype.forEach.call(button, function (button) {
+            button.addEventListener('click', removeBet);
+        })
     }
+
+    function removeBet() {
+        var resumo;
+        resumo = doc.querySelector(`[data-id="${this['id']}"]`);
+        var priceBet = resumo.lastElementChild.lastElementChild.children[1].innerHTML;
+        idItemsCart--;
+        valueBetTotal(priceBet);
+        resumo.parentNode.removeChild(resumo);
+    }
+
     function valueBetTotal(stringPrice) {
         var regexNumber = /\d+\.\d+/g;
         valuesBet.splice(valuesBet.indexOf(`${parseFloat(stringPrice.match(regexNumber))}`), 1);
