@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <link href="./styles/global.css" rel="stylesheet" type="text/css">
+    <link href="./styles/header.css" rel="stylesheet" type="text/css">
+    <link href="./styles/main.css" rel="stylesheet" type="text/css">
+    <title>TLG</title>
+</head>
+
+<body>
+    <div id="Container">
+        <header id="header">
+            <div id="header-left">
+                <div id="nameCompany">
+                    <h1>TLG</h1>
+                    <hr>
+                </div>
+                <div id="Home">
+                    <h2>Home</h2>
+                </div>
+            </div>
+            <div id="header-rigth">
+                <h2>Account</h2>
+                <div id="logout">
+                    <h2>Log out</h2>
+                    <span><img src="./assets/arrowRigth.svg"></span>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <div id="main">
+            <div id=text data-js="text">
+                <h2> <b>New bet </b> for <span id="nameGame"></span></h2>
+                <h3>Choose a game</h3>
+                <div id="buttons">
+                    <button type="button" data-js="button">Lotofácil</button>
+                    <button type="button" data-js="button">Mega-sena</button>
+                    <button type="button" data-js="button">Quina</button>
+                </div>
+                <div id="description">
+                    <b>Fill your bet</b>
+                    <p id="type-game">Aqui você encontrará a descrição do jogo que escolher. Selecione um jogo!</p>
+                </div>
+                <div id="buttonsGame"></div>
+                <div id="completeGame">
+                    <button type="button" id="completeGameButton" data-js="completeGame">Complete o jogo</button>
+                    <button type="button" id="completeGameButton" class="addButton" data-js="addButtonGame">Adicionar
+                        Números </button>
+                    <button type="button" id="completeGameButton" class="clearButtons" data-js="clearButtons">Limpar
+                        números</button>
+                </div>
+            </div>
+            <div id="cart">
+                <h1>Cart</h1>
+                <div id="areaCartBet"><p id="cartClean"><br><br>Carrinho vazio</p></div>
+                <div id="items">
+                    <span><strong>cart </strong> total: <input data-js="inputPrice" type="text" id="inputPrice" value="R$ 0.00"
+                        disabled></span>
+                </div>
+            </div>
+            <p id="value">Save<img src="./assets/next.png"></p>
+
+        </div>
+    </div>
+    </div>
+    <script src="lib_dom.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

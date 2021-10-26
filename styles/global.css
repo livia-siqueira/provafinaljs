@@ -1,0 +1,14 @@
+:root{
+    --background: #F7F7F7;
+    --lotofacil: #7f3992;
+    --megasena: #01ac66;
+    --quina: #f79c31;
+    --white: #ffffff;
+    --letters: #868686;
+    --btNumber: #adc0c4;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}

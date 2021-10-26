@@ -1,0 +1,242 @@
+#cart {
+  background-color: var(--white);
+  width: 300px;
+  max-height: 1000px;
+  padding: 8px;
+}
+
+#cart h1 {
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0px;
+  color: --letters;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+#cartClean{
+  color: var(--letters);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+  margin-bottom: 90px;
+}
+
+.Resumogame {
+  display: flex;
+  margin-top: 10px;
+  height: 80px;
+}
+
+.btnNumbers {
+  padding: 0;
+  border: 0;
+  margin: 2px;
+  font-size: 20px;
+  width: 38px;
+  color: var(--white);
+  height: 38px;
+  background: var(--btNumber) 0% 0% no-repeat padding-box;
+  border-radius: 280px;
+  opacity: 1;
+}
+
+.numbersItem {
+  padding-left: 8px;
+  margin-left: 14px;
+  border-radius: 3px;
+}
+
+.numbers {
+  text-align: left;
+  color: var(--letters);
+  opacity: 1;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+}
+#text {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#text h2 {
+  text-align: left;
+  margin-bottom: 0;
+  letter-spacing: 0px;
+  color: var(--letters);
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 20px;
+}
+
+#text h3 {
+  text-align: left;
+  letter-spacing: 0px;
+  color: var(--letters);
+  opacity: 1;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.game {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.game p:nth-child(1) {
+  color: var(--lotofacil);
+  opacity: 1;
+}
+.game p:nth-child(2) {
+  margin-left: 14px;
+}
+#description {
+  color: var(--letters);
+  margin-top: 20px;
+}
+#buttonsGame {
+  width: 800px;
+}
+#main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+  width: 90%;
+  margin: 30px auto;
+  font-size: 17px;
+}
+
+button {
+  padding: 10px 40px;
+  text-align: center;
+  opacity: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#inputPrice {
+  border: none;
+  background-color: transparent;
+  width: 80px;
+  height: 30px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: var(--letters);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#buttons button:nth-child(1) {
+  background: var(--white) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--lotofacil);
+  color: var(--lotofacil);
+  border-radius: 100px;
+  opacity: 1;
+}
+
+#buttons button:nth-child(1):hover {
+  background: var(--lotofacil) 0% 0% no-repeat padding-box;
+  color: var(--white);
+}
+#buttons button:nth-child(2):hover {
+  background: var(--megasena) 0% 0% no-repeat padding-box;
+  color: var(--white);
+}
+#buttons button:nth-child(3):hover {
+  background: var(--quina) 0% 0% no-repeat padding-box;
+  color: var(--white);
+}
+
+#buttons button:nth-child(2) {
+  background: var(--white) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--megasena);
+  border-radius: 100px;
+  opacity: 1;
+  color: var(--megasena);
+}
+#buttons button:nth-child(3) {
+  background: var(--white) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--quina);
+  border-radius: 100px;
+  opacity: 1;
+  color: var(--quina);
+}
+
+#items {
+  font-size: 24px;
+  color: var(--letters);
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.clean {
+  display: none;
+}
+#completeGame {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+#completeGameButton {
+  border: #b5c401 1px solid;
+  color: var(--letters);
+  background-color: #ffffff;
+  max-width: 180px;
+  margin-right: 20px;
+  height: 30px;
+  margin-left: 2px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#completeGameButton.addButton {
+  display: block;
+  max-width: 300px;
+}
+
+#nameGame {
+  font-weight: normal;
+}
+#areaCartBet {
+  margin-top: 20px;
+}
+.btRemove {
+  padding: 0;
+  border: none;
+  margin-right: 5px;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+}
+.btRemove img {
+  width: 20px;
+  height: 20px;
+}
+
+#value {
+  background-color: #f4f4f4;
+  width: 320px;
+  height: 96px;
+  margin-right: -1215px;
+  margin-top: -8px;
+  text-align: center;
+  font: italic normal bold 35px/70px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #27c383;
+  opacity: 1;
+}
+
+#value img{
+  margin-left: 20px;
+}
+
