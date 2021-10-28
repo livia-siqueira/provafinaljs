@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400;1,500;1,900&display=swap"
+        rel="stylesheet">
     <link href="./styles/global.css" rel="stylesheet" type="text/css">
     <link href="./styles/header.css" rel="stylesheet" type="text/css">
     <link href="./styles/main.css" rel="stylesheet" type="text/css">
@@ -40,9 +41,6 @@
                 <h2> <b>New bet </b> for <span id="nameGame"></span></h2>
                 <h3>Choose a game</h3>
                 <div id="buttons">
-                    <button type="button" data-js="button">Lotofácil</button>
-                    <button type="button" data-js="button">Mega-sena</button>
-                    <button type="button" data-js="button">Quina</button>
                 </div>
                 <div id="description">
                     <b>Fill your bet</b>
@@ -50,25 +48,38 @@
                 </div>
                 <div id="buttonsGame"></div>
                 <div id="completeGame">
-                    <button type="button" id="completeGameButton" data-js="completeGame">Complete o jogo</button>
-                    <button type="button" id="completeGameButton" class="addButton" data-js="addButtonGame">Adicionar
-                        Números </button>
-                    <button type="button" id="completeGameButton" class="clearButtons" data-js="clearButtons">Limpar
-                        números</button>
+                    <div id="completeAndClear">
+                        <button type="button" id="completeGameButton" data-js="completeGame">Complete game</button>
+                        <button type="button" id="completeGameButton" class="clearButtons" data-js="clearButtons">Clear
+                            game</button>
+                    </div>
+                    <div id="btclear">
+                        <button type="button" id="completeGameButton" class="addButton" data-js="addButtonGame"><img
+                                src="assets/carrinhoCompras.png">Add to
+                            Cart</button>
+                    </div>
                 </div>
             </div>
             <div id="cart">
                 <h1>Cart</h1>
-                <div id="areaCartBet"><p id="cartClean"> Carrinho vazio</p></div>
+                <div id="areaCartBet">
+                </div>
                 <div id="items">
-                    <span><strong>cart </strong> total: <input data-js="inputPrice" type="text" id="inputPrice" value="R$ 0.00"
-                        disabled></span>
+                    <span><strong>cart </strong> total: <input data-js="inputPrice" type="text" id="inputPrice"
+                            value="R$ 0,00" disabled></span>
+                </div>
+
+                <div id="elementFinal">
+                    <p id="value">Save<img src="./assets/next.png"></p>
+                    </footer>
                 </div>
             </div>
-            <p id="value">Save<img src="./assets/next.png"></p>
 
         </div>
     </div>
+    <footer>
+        <p>Copyright 2020 Luby Software</p>
+    </footer>
     </div>
     <script src="index.js"></script>
 </body>

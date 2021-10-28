@@ -1,8 +1,11 @@
 #cart {
   background-color: var(--white);
   width: 300px;
-  max-height: 1000px;
-  padding: 8px;
+  max-height: 400px;
+  padding: 18px;
+  padding-right: 0;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
 }
 
 #cart h1 {
@@ -16,7 +19,7 @@
   opacity: 1;
 }
 
-#cartClean{
+.cartClean {
   color: var(--letters);
   font-size: 20px;
   font-style: italic;
@@ -26,8 +29,9 @@
 
 .Resumogame {
   display: flex;
-  margin-top: 10px;
+  margin-top: 25px;
   height: 80px;
+  margin-left: -5px;
 }
 
 .btnNumbers {
@@ -38,15 +42,17 @@
   width: 38px;
   color: var(--white);
   height: 38px;
-  background: var(--btNumber) 0% 0% no-repeat padding-box;
+  background-color:#adc0c4;
   border-radius: 280px;
   opacity: 1;
 }
 
 .numbersItem {
-  padding-left: 8px;
-  margin-left: 14px;
+  padding-left: 4px;
+  padding-right: 20px;
+  margin-left: 10px;
   border-radius: 3px;
+  height: 100px;
 }
 
 .numbers {
@@ -54,9 +60,18 @@
   color: var(--letters);
   opacity: 1;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
+  margin-top: 12px;
+  width: 200px;
 }
+
+.numbers span{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
 #text {
   font-size: 18px;
   font-weight: 400;
@@ -95,7 +110,7 @@
 }
 #description {
   color: var(--letters);
-  margin-top: 20px;
+  margin-top: -10px;
 }
 #buttonsGame {
   width: 800px;
@@ -106,7 +121,7 @@
   justify-content: space-around;
   justify-items: center;
   width: 90%;
-  margin: 30px auto;
+  margin: 10px auto;
   font-size: 17px;
 }
 
@@ -121,55 +136,25 @@ button {
 #inputPrice {
   border: none;
   background-color: transparent;
-  width: 80px;
+  width: 100px;
   height: 30px;
   text-align: left;
   letter-spacing: 0px;
   color: var(--letters);
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: bold;
 }
 
 #buttons {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
-}
-
-#buttons button:nth-child(1) {
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 2px solid var(--lotofacil);
-  color: var(--lotofacil);
   border-radius: 100px;
   opacity: 1;
+  margin-left: 20px;
 }
 
-#buttons button:nth-child(1):hover {
-  background: var(--lotofacil) 0% 0% no-repeat padding-box;
-  color: var(--white);
-}
-#buttons button:nth-child(2):hover {
-  background: var(--megasena) 0% 0% no-repeat padding-box;
-  color: var(--white);
-}
-#buttons button:nth-child(3):hover {
-  background: var(--quina) 0% 0% no-repeat padding-box;
-  color: var(--white);
-}
-
-#buttons button:nth-child(2) {
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 2px solid var(--megasena);
-  border-radius: 100px;
-  opacity: 1;
-  color: var(--megasena);
-}
-#buttons button:nth-child(3) {
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 2px solid var(--quina);
-  border-radius: 100px;
-  opacity: 1;
-  color: var(--quina);
+#buttons:nth-child(1) {
+  margin-left: -20px;
 }
 
 #items {
@@ -184,31 +169,51 @@ button {
 }
 #completeGame {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 #completeGameButton {
-  border: #b5c401 1px solid;
-  color: var(--letters);
-  background-color: #ffffff;
-  max-width: 180px;
-  margin-right: 20px;
-  height: 30px;
-  margin-left: 2px;
-  padding: 8px;
-  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid #27c383;
+  border-radius: 10px;
+  max-width: 209px;
+  height: 52px;
+  color: #27c383;
+  opacity: 1;
+  padding: 15px;
 }
 
 #completeGameButton.addButton {
-  display: block;
-  max-width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  background: #27c383 0% 0% no-repeat padding-box;
+  border: 1px solid #27c383;
+  border-radius: 10px;
+  opacity: 1;
+  color: var(--white);
+  width: 209px;
+  height: 52px;
+}
+
+#completeGameButton.addButton img {
+  margin: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
 }
 
 #nameGame {
   font-weight: normal;
 }
 #areaCartBet {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 200px;
   margin-top: 20px;
+  display: block;
 }
 .btRemove {
   padding: 0;
@@ -222,21 +227,35 @@ button {
   width: 20px;
   height: 20px;
 }
-
-#value {
+#completeAndClear {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+#elementFinal{
   background-color: #f4f4f4;
-  width: 320px;
+  width: 316px;
   height: 96px;
-  margin-right: -1215px;
-  margin-top: -8px;
+  border: 1px solid #e2e2e2;
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
   text-align: center;
-  font: italic normal bold 35px/70px Helvetica Neue;
-  letter-spacing: 0px;
   color: #27c383;
   opacity: 1;
+  position: relative;
+  margin-left: -18px;
+  font-size: 35px;
+  font-weight: bold;
 }
-
-#value img{
-  margin-left: 20px;
+footer {
+  position: absolute;
+  width: 100%;
+  margin-top: 30px;
+  border-top: 1px solid #e2e2e2;
+  text-align: center;
 }
-
+footer p {
+  text-align: center;
+  color: #707070;
+  opacity: 1;
+}

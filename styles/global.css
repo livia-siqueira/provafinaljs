@@ -11,4 +11,6 @@
 body{
     background-color: var(--background);
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
